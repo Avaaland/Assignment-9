@@ -60,3 +60,10 @@ fetchBtn.addEventListener("click", async () => {
     const query = (inputEl.value || "cats").trim();
     await fetchGifs(query);
 });
+
+inputEl.addEventListener("keydown", async (e) => {
+    if (e.key === "Enter") {
+        const query = (inputEl.value || "cats").trim();
+        await fetchGifs(query);
+    }
+});
